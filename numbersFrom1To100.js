@@ -1,7 +1,8 @@
-function numbersFrom1To100 (arg1) {
-    let i = Number(arg1);
+function numbersFrom1To100(input) {
+  let number = Number(input.shift());
 
-    for (i = 1; i <= 100; i++) {
-        console.log(i);
-    }
+  for (let i = 1; i <= 100; i++) {
+    console.log(i);
+  }
 }
+numbersFrom1To100([]);

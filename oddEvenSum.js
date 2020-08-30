@@ -20,3 +20,4 @@ function oddEvenSum(input) {
     console.log(`No\nDiff = ${diff}`);
   }
 }
+oddEvenSum([4, 10, 20, 30, 20]);

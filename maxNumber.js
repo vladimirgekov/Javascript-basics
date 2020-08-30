@@ -1,13 +1,16 @@
-function maxNumber (args) {
-    let n = Number (args[0]);
-    let max = Number.NEGATIVE_INFINITY;
+function maxNumber(input) {
+  let n = +input.shift();
+  let k = 0;
 
-    for (var i = 1; i <= n; i++) {
-        let num = Number(args[i]);
+  let maxNumber = -10000;
 
-        if (num > max) {
-            max = num;
-        }
+  while (k < n) {
+    let number = +input.shift();
+
+    if (number >= maxNumber) {
+      maxNumber = number;
     }
-    console.log("max = " + max);
+    k++;
+  }
+  console.log(maxNumber);
 }

@@ -1,26 +1,21 @@
-function numberPyramid([arg1]) {
-  let n = parseInt(arg1);
-  let num = 1;
-  let result = "";
+function numberPyramid(input) {
+  let end = Number(input.shift());
+  let currentnumber = 1;
+  let isbigger = false;
+  let line = "";
 
-  for (let row = 1; row <= n; row++) {
-    for (let col = 1; col <= row; col++) {
-      if (col > 1) {
-        result += " ";
-      }
-
-      result += num;
-      num++;
-
-      if (num > n) {
+  for (let row = 1; row <= end; row++) {
+    for (let number = 1; number <= row; number++) {
+      if (currentnumber > end) {
+        isbigger = true;
         break;
       }
+      line += currentnumber + " ";
+      currentnumber++;
     }
-
-    console.log(result);
-    result = "";
-
-    if (num > n) {
+    console.log(line);
+    line = "";
+    if (isbigger) {
       break;
     }
   }

@@ -1,9 +1,7 @@
-function numbersEnding7 (arg1) {
-    let i = Number(arg1); 
-
-    for (i = 0; i <= 1000; i++) {
-        if (i % 10 == 7) {
-            console.log(i);
-        }
+function numbersEnding7(input) {
+  for (number = 1; number <= 1000; number++) {
+    if (number % 10 === 7) {
+      console.log(number);
     }
+  }
 }

@@ -1,29 +1,38 @@
-function fruitShop([arg1,arg2,arg3]) {
-    let plod=arg1;
-    let den=arg2;
-    let kolichestvo=parseFloat(arg3);
-    let cena=0;
+function fruitShop(input) {
+  let fruit = input.shift();
+  let dayOfWeek = input.shift();
+  let quantity = Number(input.shift());
+  let price = 0;
 
-    if (den==="Saturday" || den==="Sunday") {
-        if (plod==="banana") cena=2.70;
-        else if (plod==="apple") cena=1.25;
-        else if (plod==="orange") cena=0.90;
-        else if (plod==="grapefruit") cena=1.60;
-        else if (plod==="kiwi") cena=3.00;
-        else if (plod==="pineapple") cena=5.60;
-        else if (plod==="grapes") cena=4.20;
-    } else if (den==="Monday" || den==="Tuesday" || den==="Wednesday" || den==="Thursday" || den==="Friday") {
-        if (plod==="banana") cena=2.50;
-        else if (plod==="apple") cena=1.20;
-        else if (plod==="orange") cena=0.85;
-        else if (plod==="grapefruid") cena=1.45;
-        else if (plod==="kiwi") cena=2.70;
-        else if (plod==="pineapple") cena=5.50;
-        else if (plod==="grapes") cena=3.85;
-        }
-    else {
-        console.log("error");
-    }
-    let suma=kolichestvo*cena;
-    console.log(suma.toFixed(2));
+  switch (dayOfWeek) {
+    case "Monday":
+    case "Tuesday":
+    case "Wednesday":
+    case "Thursday":
+    case "Friday":
+      if (fruit === "banana") price = 2.5;
+      else if (fruit === "apple") price = 1.2;
+      else if (fruit === "orange") price = 0.85;
+      else if (fruit === "grapefruid") price = 1.45;
+      else if (fruit === "kiwi") price = 2.7;
+      else if (fruit === "pineapple") price = 5.5;
+      else if (fruit === "grapes") price = 3.85;
+      break;
+    case "Saturday":
+    case "Sunday":
+      if (fruit === "banana") price = 2.7;
+      else if (fruit === "apple") price = 1.25;
+      else if (fruit === "orange") price = 0.9;
+      else if (fruit === "grapefruit") price = 1.6;
+      else if (fruit === "kiwi") price = 3.0;
+      else if (fruit === "pineapple") price = 5.6;
+      else if (fruit === "grapes") price = 4.2;
+      break;
+  }
+  let sum = quantity * price;
+  if (sum > 0) {
+    console.log(sum.toFixed(2));
+  } else {
+    console.log("error");
+  }
 }

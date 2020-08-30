@@ -1,6 +1,7 @@
-function numbersNto1([arg1]) {
-  let n = parseInt(arg1);
-  for (let i = n; i >= 1; i -= 1) {
+function numbersNto1(input) {
+  let number = Number(input.shift());
+  let newnumber = number;
+  for (let i = newnumber; i >= 1; i--) {
     console.log(i);
   }
 }

@@ -1,13 +1,16 @@
-function minNumber(args) {
-    let n = Number(args[0]);
-    let min = Number.POSITIVE_INFINITY;
+function minNumber(input) {
+  let n = Number(input.shift());
+  let k = 0;
 
-    for (var i = 1; i <= n; i++){
-        let num = Number(args[i]);
-    
-    if (num < min) {
-        min = num;
+  let minNumber = Number.MAX_VALUE;
+
+  while (k < n) {
+    let number = Number(input.shift());
+
+    if (number <= minNumber) {
+      minNumber = number;
     }
-    console.log(min);
-}
+    k++;
+  }
+  console.log(minNumber);
 }

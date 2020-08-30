@@ -7,4 +7,3 @@ function passwordGuess ([arg1]) {
         console.log ("Wrong password!");
     }
 }
-passwordGuess(["s3cr3t!P@ssw0rd"])
